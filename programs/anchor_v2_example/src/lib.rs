@@ -34,4 +34,8 @@ pub mod anchor_v2_example {
     pub fn init_pool(ctx: Context<InitPool>, pool_name: String) -> Result<()> {
         init_pool::handler(ctx, pool_name)
     }
+
+    pub fn add_liquidity(ctx: Context<AddLiquidity>, amount_a: u64, amount_b: u64) -> Result<()> {
+        add_liquidity::handler(ctx, amount_a, amount_b)
+    }
 }
